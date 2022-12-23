@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
         rb.velocity = direction * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Enemy"))

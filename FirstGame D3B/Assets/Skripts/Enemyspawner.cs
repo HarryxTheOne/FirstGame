@@ -25,7 +25,7 @@ public class Enemyspawner : MonoBehaviour
     void SpawnEnemy()
     {
         // choose a random side to spawn the enemy on
-        int side = Random.Range(0, 4);
+        int side = Random.Range(0, 3);
 
         // create a position off screen to spawn the enemy at
         Vector3 enemyPosition = Vector3.zero;

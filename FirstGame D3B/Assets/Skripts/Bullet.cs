@@ -6,11 +6,12 @@ public class Bullet : MonoBehaviour
 {
 
     public GameObject hitEffect;
+    public float hitEffectDuration = 0.5f;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 2f);
+        Destroy(effect, hitEffectDuration);
         Destroy(gameObject);
 
     }
