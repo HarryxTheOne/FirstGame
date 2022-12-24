@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+    public bool isDead = false;
 
     void Start()
     {
@@ -20,11 +21,11 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if (currentHealth <= 0)
         {
-            Die();
+            Die = true();
         }
     }
 
-    void Die()
+    public void Die()
     {
         // Handle player death here (e.g. game over screen, respawn, etc.)
         Debug.Log("Player died!");
